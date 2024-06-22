@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="google" content="notranslate" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>FluffySwap - the fastest crypto exchange possible</title>
+    <meta name="description" content="Tired of playing around with different exchange services? Let us do the job for you. FluffySwap will make sure that you have the best day trading experience available and done in seconds." />
+    <meta name="keywords" content="exchange, crypto exchange, crypto, bitcoin, litecoin, duincoin, coin magi, magicoin, magi, swap, sushiswap, fluffyswap, fluffy, shift, crypto shift, best, fast, sideshift, side">
+
+    <meta property="og:site_name" content="FluffySwap" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fluffyswap.com/">
+    <meta property="og:title" content="FluffySwap - the fastest crypto exchange possible">
+    <meta property="og:description" content="Tired of playing around with different exchange services? Let us do the job for you. FluffySwap will make sure that you have the best day trading experience available and done in seconds.">
+    <meta property="og:image" content="https://fluffyswap.com/banner.png?v=2">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fluffyswap.com/">
+    <meta property="twitter:title" content="FluffySwap - the fastest crypto exchange possible">
+    <meta property="twitter:description" content="Tired of playing around with different exchange services? Let us do the job for you. FluffySwap will make sure that you have the best day trading experience available and done in seconds.">
+
+    <meta name=”robots” content="index, follow">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bulma.css">
+    <link rel="stylesheet" href="css/modal-fx.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5b77d5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+
+<body style="min-height:100vh" class="sky">
+    <div id="pageloader">
+        <div class="cloud"></div>
+    </div>
+    <div>
+        <div class="logo">
+            <a href="/">
+                <img src="logo.png">
+            </a>
+        </div>
+        <div class="socials">
+            <a href="#shifts">
+                <img src="/icons/shifts.png" style="width:5em;animation: movesmall 2.5s infinite ease-in-out">
+            </a>
+            <a href="#help">
+                <img src="/icons/help.png" style="width:5em;animation: movesmall 2.5s infinite ease-in-out;animation-delay: 0.5s;">
+            </a>
+            <a href="https://duinocoin.com" target="_blank">
+                <img src="/icons/duino.png" style="width:5em;animation: movesmall 2.5s infinite ease-in-out;">
+            </a>
+            <a href="mailto:support@fluffyswap.com" target="_blank">
+                <img src="/icons/mail.png" style="width:5em;animation: movesmall 2.5s infinite ease-in-out;animation-delay: 0.5s;">
+            </a>
+        </div>
+    </div>
+    <br>
+    <section class="section">
+        <div class="container">
+            <center>
+                <div class="cloud-1"></div>
+                <div class="box mainbox" style="max-width:500px">
+                    <div id="step1">
+                        <div class="columns is-mobile">
+                            <div class="column">
+                                <p class="has-text-centered title is-size-5">
+                                    You'll send
+                                </p>
+                            </div>
+                            <div class="column is-narrow">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                            <div class="column">
+                                <p class="has-text-centered title is-size-5">
+                                    You'll receive
+                                </p>
+                            </div>
+                        </div>
+                        <div class="columns is-mobile mb-0">
+                            <div class="column">
+                                <div class="box buttonbox modal-button" data-target="modal-from">
+                                    <img class="rotate-2" src="/icons/btc.png" id="from_icon">
+                                    <p class="title is-size-4" id="from_symbol">
+                                        BTC
+                                    </p>
+                                    <p class="subtitle" id="from_name">
+                                        Bitcoin
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="box buttonbox modal-button" data-target="modal-to">
+                                    <img class="rotate" src="/icons/trx.png" id="to_icon">
+                                    <p class="title is-size-4" id="to_symbol">
+                                        TRX
+                                    </p>
+                                    <p class="subtitle" id="to_name">
+                                        Tron
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p id="exchange_rate" class="heading mt-0 is-size-6">
+                            1 BTC = 371731.894128 TRX
+                        </p>
+                        <p class="subtitle mb-1" id="receiving_label">
+                            Your <b>Tron</b> address
+                        </p>
+                        <input id="address_input" class="input is-rounded" type="text" placeholder="Receiving TRX wallet">
+                        <p class="subtitle mb-0 has-text-danger" style="display: none" id="incorrect_address">Hmm... It doesn't look right :c</p>
+                        <button disabled id="swap_button" class="button mt-3 is-fullwidth is-rounded is-primary">
+                            Swap!
+                        </button>
+                    </div>
+                    <div id="step2" style="display:none">
+                        <div id="preparing">
+                            <p class="title">
+                                Creating your order...
+                            </p>
+                            <div class="wrapper">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="shadow"></div>
+                                <div class="shadow"></div>
+                                <div class="shadow"></div>
+                            </div>
+                        </div>
+                        <div id="prepared" style="display:none">
+                            <p class="heading is-size-6">
+                                Order <b class="accent">#<span id="order"></span></b>
+                            </p>
+                            <p class="subtitle mb-1 mt-3">
+                                Please send your <b class="from_coin">coin</b> to
+                            </p>
+                            <div class="field has-addons mb-0">
+                                <div class="control is-expanded">
+                                    <input readonly class="input is-expanded is-rounded monospace" type="text" id="send_address" value="This address">
+                                </div>
+                                <div class="control">
+                                    <button class="button is-fullwidth is-rounded" id="copy_button" onclick="copy_address()">
+                                        Copy
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="heading is-size-6 mt-1">
+                                Min: <b class="has-text-success" id="from_minimum">?</b>, max: <b class="has-text-danger" id="from_maximum">?</b>
+                            </p>
+                            <p class="title mt-3 is-size-4">
+                                We're waiting for you<span id="dots">.</span>
+                            </p>
+                            <p class="subtitle">
+                                Once you make the transaction we will send you fresh <b class="to_coin">TRX</b> as soon as possible.
+                            </p>
+                            <div class="columns is-mobile is-vcentered">
+                                <div class="column"></div>
+                                <div class="column is-narrow">
+                                    Not in the mood?
+                                </div>
+                                <div class="column is-narrow">
+                                    <button class="button is-small is-danger is-rounded" id="cancel_button" onclick="cancel_swap()">
+                                        Cancel
+                                    </button>
+                                </div>
+                                <div class="column"></div>
+                            </div>
+                            <div class="notification is-info" id="xno_notice" style="display:none;border-radius:25px">
+                                <i class="fa fa-info-circle"></i>
+                                <b>Nano</b> transactions may take <b>a few minutes</b> to go through due to the feeless nature of the network
+                            </div>
+                            <div class="notification is-info" id="xmg_notice" style="display:none;border-radius:25px">
+                                <i class="fa fa-info-circle"></i>
+                                <b>XMG</b> transactions may be delivered in parts. That will take a few minutes for big orders
+                            </div>
+                            <hr>
+                            <p class="heading is-size-7">
+                                Some coins may take <b class="has-text-info">up to 15 minutes</b> to register the transaction, most take <b class="has-text-info">1 minute</b><br>
+                                Swap will timeout <b class="accent">1 hour</b> after creation<br>
+                                A <b class="has-text-success">1%</b> FluffySwap.com fee will apply
+                            </p>
+                        </div>
+                        <div id="sending" style="display:none">
+                            <p class="title">
+                                We're sending <span class="to_coin">TRX</span> to you...
+                            </p>
+                            <div class="wrapper">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="shadow"></div>
+                                <div class="shadow"></div>
+                                <div class="shadow"></div>
+                            </div>
+                            <div class="notification is-info" id="xmg_notice_2" style="display:none;border-radius:25px">
+                                <i class="fa fa-info-circle"></i>
+                                <b>XMG</b> transactions may be delivered in parts. That will take a few minutes for big orders
+                            </div>
+                        </div>
+                        <div id="done" style="display:none">
+                            <p class="title">
+                                Done!
+                            </p>
+                            <p class="subtitle mb-0">
+                                We've sent you <b class="to_coin">TRX</b> in transaction:
+                                <a id="txid_link" target="_blank">
+                                    <span id="txid">link</span>
+                                </a>
+                            </p>
+                            <img src="/icons/finished.gif">
+                            <p class="heading is-size-7">
+                                <b class="has-text-success">Thank you</b> for using FluffySwap.com
+                            </p>
+                            <a href="/" class="button is-fullwidth is-primary is-rounded">
+                                Swap again?
+                            </a>
+                        </div>
+                        <div id="cancelled" style="display:none">
+                            <p class="title">
+                                Gotcha!
+                            </p>
+                            <p class="subtitle mb-0">
+                                No need to force anything, right?
+                            </p>
+                            <img src="/icons/finished.gif">
+                            <p class="heading is-size-7">
+                                <b class="has-text-success">Feel free to swap</b> at a later date
+                            </p>
+                            <a href="/" class="button is-fullwidth is-primary is-rounded">
+                                Try again?
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cloud-2"></div>
+            </center>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <center id="shifts">
+                <div class="cloud-3"></div>
+                <div class="box mainbox" style="max-width:500px">
+                    <p class="title is-size-4">
+                        Recent swaps
+                    </p>
+                    <p>
+                        <ul class="subtitle is-size-5" id="recent_swaps">
+                            None?
+                        </ul>
+                    </p>
+                </div>
+                <div class="cloud-4"></div>
+            </center>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <center id="help">
+                <div class="cloud-1" style="zoom:0.8"></div>
+                <div class="box mainbox" style="max-width:500px">
+                    <p class="title is-size-4">
+                        FAQ & Help
+                    </p>
+                    <p class="title is-size-5">
+                        <span class="has-text-weight-normal">Q:</span> What are the conversion rates?
+                    </p>
+                    <p class="subtitle">
+                        A: Conversion rates are taken from crypto markets and are not altered by us in any way. You will get coins exchanged at the <b class="accent">best price currently possible.</b>
+                    </p>
+                    <p class="title is-size-5 mt-3">
+                        <span class="has-text-weight-normal">Q:</span> Are there any fees?
+                    </p>
+                    <p class="subtitle">
+                        A: Other than regular transaction fees which depend on selected cryptocurrency, FluffySwap.com takes a <b class="accent">small 1% fee</b> for further operation.
+                    </p>
+                    <p class="title is-size-5 mt-3">
+                        <span class="has-text-weight-normal">Q:</span> What are the max and min amounts?
+                    </p>
+                    <p class="subtitle">
+                        A: The <b class="accent">maximum amount</b> for deposit is the highest amount of coins you can <b class="accent">get exchanged</b> - we have a limited amount of crypto in the reserves. <b class="accent">Minimum amount</b> is the smallest amount that will cover the <b class="accent">transaction fees</b>.
+                        Your funds may get lost if you send less than the min amount.
+                    </p>
+                    <p class="title is-size-5 mt-3">
+                        <span class="has-text-weight-normal">Q:</span> How can I reach out to you?
+                    </p>
+                    <p class="subtitle">
+                        A: If you have questions, concerns or want to list a new coin simply <b class="accent">e-mail us</b> at <a href="mailto:support@fluffyswap.com">support@fluffyswap.com</a> - we will respond as soon as possible.
+                    </p>.
+                </div>
+                <div class="cloud-2"></div>
+            </center>
+        </div>
+    </section>
+    <center>
+        <footer class="footer">
+            <b class="accent">FluffySwap.com</b>, 2022-2024<br>
+        </footer>
+    </center>
+    <div id="modal-from" class="modal modal-fx-3dFlipVertical">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box mainbox">
+                <p class="title is-size-4 has-text-centered">
+                    Input currency
+                    <span class="has-text-weight-normal">
+                        (coin you'll send)
+                    </span>
+                </p>
+                <div class="columns is-mobile is-multiline" id="available_coins_from">
+                    Loading...
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div id="modal-to" class="modal modal-fx-3dFlipVertical">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="box mainbox">
+                <p class="title is-size-4 has-text-centered">
+                    Output currency
+                    <span class="has-text-weight-normal">
+                        (coin you'll receive)
+                    </span>
+                </p>
+                <div class="columns is-mobile is-multiline" id="available_coins_to">
+                    Loading...
+                </div>
+            </div>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/wallet-address-validator.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/modal-fx.min.js"></script>
+</body>
+
+</html>

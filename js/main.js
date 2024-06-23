@@ -1,5 +1,5 @@
-from_coin = 'BTC';
-to_coin = 'TRX';
+from_coin = 'BAN';
+to_coin = 'XNO';
 to_rate = 0;
 cancel = false;
 coins = {}

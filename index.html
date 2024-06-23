@@ -112,7 +112,7 @@
                         <p class="subtitle mb-1" id="receiving_label">
                             Your <b>Nano</b> address
                         </p>
-                        <input id="address_input" class="input is-rounded" type="text" placeholder="Receiving TRX wallet">
+                        <input id="address_input" class="input is-rounded" type="text" placeholder="Receiving Nano wallet">
                         <p class="subtitle mb-0 has-text-danger" style="display: none" id="incorrect_address">Hmm... It doesn't look right :c</p>
                         <button disabled id="swap_button" class="button mt-3 is-fullwidth is-rounded is-primary">
                             Swap!
@@ -174,10 +174,6 @@
                                 <i class="fa fa-info-circle"></i>
                                 <b>Nano</b> transactions may take <b>a few minutes</b> to go through due to the feeless nature of the network
                             </div>
-                            <div class="notification is-info" id="xmg_notice" style="display:none;border-radius:25px">
-                                <i class="fa fa-info-circle"></i>
-                                <b>XMG</b> transactions may be delivered in parts. That will take a few minutes for big orders
-                            </div>
                             <hr>
                             <p class="heading is-size-7">
                                 Some coins may take <b class="has-text-info">up to 15 minutes</b> to register the transaction, most take <b class="has-text-info">1 minute</b><br>
@@ -187,7 +183,7 @@
                         </div>
                         <div id="sending" style="display:none">
                             <p class="title">
-                                We're sending <span class="to_coin">TRX</span> to you...
+                                We're sending <span class="to_coin">Nano</span> to you...
                             </p>
                             <div class="wrapper">
                                 <div class="circle"></div>
@@ -197,17 +193,13 @@
                                 <div class="shadow"></div>
                                 <div class="shadow"></div>
                             </div>
-                            <div class="notification is-info" id="xmg_notice_2" style="display:none;border-radius:25px">
-                                <i class="fa fa-info-circle"></i>
-                                <b>XMG</b> transactions may be delivered in parts. That will take a few minutes for big orders
-                            </div>
                         </div>
                         <div id="done" style="display:none">
                             <p class="title">
                                 Done!
                             </p>
                             <p class="subtitle mb-0">
-                                We've sent you <b class="to_coin">TRX</b> in transaction:
+                                We've sent you <b class="to_coin">XNO</b> in transaction:
                                 <a id="txid_link" target="_blank">
                                     <span id="txid">link</span>
                                 </a>
@@ -271,7 +263,7 @@
                         <span class="has-text-weight-normal">Q:</span> What are the conversion rates?
                     </p>
                     <p class="subtitle">
-                        A: Conversion rates are taken from crypto markets and are not altered by us in any way. You will get coins exchanged at the <b class="accent">best price currently possible.</b>
+                        A: Conversion rates are taken from Coingecko and are not altered by us in any way. You will get coins exchanged at the <b class="accent">best price currently possible.</b>
                     </p>
                     <p class="title is-size-5 mt-3">
                         <span class="has-text-weight-normal">Q:</span> Are there any fees?
@@ -299,7 +291,7 @@
     </section>
     <center>
         <footer class="footer">
-            <b class="accent">FluffySwap.com</b>, 2022-2024<br>
+            <b class="accent">ZapEx</b>, 2024<br>
         </footer>
     </center>
     <div id="modal-from" class="modal modal-fx-3dFlipVertical">

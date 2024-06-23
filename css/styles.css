@@ -127,65 +127,6 @@ html {
         margin-right: auto;
     }
 }
-
-
-.cloud-1 {
-    position: relative;
-    left: -250px;
-    top: 50px;
-    scale: .7;
-    background: rgba(255, 255, 255, 0.8);
-    width: 300px;
-    height: 100px;
-    border-radius: 150px;
-    box-shadow: 7px 7px 3px 0px rgba(0, 0, 0, 0.2);
-    animation: move 2s infinite ease-in-out;
-    z-index: 1;
-}
-
-
-.cloud-2 {
-    z-index: 1;
-    position: relative;
-    left: 250px;
-    top: -50px;
-    scale: .5;
-    background: rgba(255, 255, 255, 0.8);
-    width: 300px;
-    height: 100px;
-    border-radius: 150px;
-    box-shadow: 7px 7px 3px 0px rgba(0, 0, 0, 0.2);
-    animation: move 3s infinite ease-in-out;
-}
-
-.cloud-3 {
-    position: relative;
-    right: -250px;
-    top: 50px;
-    scale: .4;
-    background: rgba(255, 255, 255, 0.8);
-    width: 300px;
-    height: 100px;
-    border-radius: 150px;
-    box-shadow: 7px 7px 3px 0px rgba(0, 0, 0, 0.2);
-    animation: move 2s infinite ease-in-out;
-    z-index: 1;
-}
-
-.cloud-4 {
-    z-index: 1;
-    position: relative;
-    left: -250px;
-    top: -50px;
-    scale: .7;
-    background: rgba(255, 255, 255, 0.8);
-    width: 300px;
-    height: 100px;
-    border-radius: 150px;
-    box-shadow: 7px 7px 3px 0px rgba(0, 0, 0, 0.2);
-    animation: move 3s infinite ease-in-out;
-}
-
 .buttonbox {
     transition: 0.2s all;
     cursor: pointer;
@@ -217,36 +158,6 @@ html {
     z-index: 2 !important;
     box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.2) !important;
     border-radius: 25px !important;
-}
-
-.cloud-1:after,
-.cloud-2:after,
-.cloud:after,
-.cloud-3:after,
-.cloud-4:after {
-    content: '';
-    background: rgba(255, 255, 255, 0.8);
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    top: -50px;
-    left: 50px;
-}
-
-.cloud-1:before,
-.cloud-2:before,
-.cloud:before,
-.cloud-3:before,
-.cloud-4:before {
-    content: '';
-    background: rgba(255, 255, 255);
-    position: absolute;
-    width: 170px;
-    height: 150px;
-    border-radius: 50%;
-    top: -90px;
-    right: 40px;
 }
 
 @keyframes move {

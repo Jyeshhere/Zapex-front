@@ -79,7 +79,7 @@ fetch(`https://fluffyswap.com/recent_swaps`)
         $("#recent_swaps").html(final_html)
     });
 
-other_coins = ["XMG", "DUCO", "XNO", "BAN"]
+other_coins = ["XNO", "BAN"]
 
 function round_to(precision, value) {
     power_of_ten = 10 ** precision;
@@ -147,22 +147,7 @@ $("#swap_button").click(function() {
     address = $("#address_input").val();
 
     create_a_swap = false;
-
-    if (to_coin == "DUCO") {
-        $.getJSON(`https://server.duinocoin.com/balances/${address}`,
-            function(data) {
-                if (!data.success) {
-                    alert("Incorrect Duino-Coin username provided! Keep in mind it's case sensitive!");
-                }
-                else {
-                    create_swap(address);
-                    return;
-                }
-            });
-    } else if (to_coin == "XMG") {
-        if (address.length == 34 && address.startsWith("9")) create_a_swap = true;
-        else alert("Incorrect Coin Magi address provided! It should be 34 characters long and start with 9!");
-    } else if (to_coin == "BAN") {
+    }  if (to_coin == "BAN") {
         if (address.startsWith("ban_")) create_a_swap = true;
         else alert("Incorrect Banano address provided! It should start with ban!");
     } else if (to_coin == "XNO") {
@@ -237,9 +222,6 @@ function check_swap(swap_id) {
                         if (from_coin == "DUCO") {
                             $("#send_address").val(
                                 `"coinexchange" with memo: ${send_addr}`);
-                        } else if (from_coin == "XMG") {
-                            $("#send_address").val(
-                                `"revox" with memo: ${send_addr}`);
                         } else { $("#send_address").val(send_addr); }
                         $("#from_minimum").html(
                             `${data.result.min.toFixed(4)} ${from_coin}`)

@@ -5,7 +5,7 @@ cancel = false;
 coins = {}
 swap_id = "";
 
-fetch(`https://fluffyswap.com/rates/${from_coin}?to=${to_coin}`)
+fetch(`https://zapex-server.onrender.com/rates/${from_coin}?to=${to_coin}`)
     .then((response) => response.json())
     .then((data) => {
         if (from_coin == "DUCO" || from_coin == "XMG") to_rate = round_to(10, data["result"]);
@@ -96,7 +96,7 @@ function set_from(coin) {
     $("#from_name").html(coins[coin]["name"]);
 
     if (from_coin != to_coin) {
-        fetch(`https://fluffyswap.com/rates/${from_coin}?to=${to_coin}`)
+        fetch(`https://zapex-server.onrender.com.com/rates/${from_coin}?to=${to_coin}`)
             .then((response) => response.json())
             .then((data) => {
                 if (from_coin == "DUCO" || from_coin == "XMG") to_rate = round_to(10, data["result"]);
@@ -297,7 +297,7 @@ setInterval(function() {
 
 }, 350)
 
-fetch('https://fluffyswap.com/in_coins')
+fetch('https://zapex-server.onrender.com/in_coins')
     .then((response) => response.json())
     .then((data) => {
         final_html = "";
@@ -334,7 +334,7 @@ fetch('https://fluffyswap.com/in_coins')
 
     });
 
-fetch('https://fluffyswap.com/out_coins')
+fetch('https://zapex-server.onrender.com/out_coins')
     .then((response) => response.json())
     .then((data) => {
         coins = data;

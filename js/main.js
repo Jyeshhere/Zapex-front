@@ -315,7 +315,7 @@ setInterval(function() {
 
 }, 350)
 
-fetch('https://fluffyswap.com/in_coins')
+fetch('https://zapex-front.onrender.com/in_coins')
     .then((response) => response.json())
     .then((data) => {
         final_html = "";
@@ -352,7 +352,7 @@ fetch('https://fluffyswap.com/in_coins')
 
     });
 
-fetch('https://fluffyswap.com/out_coins')
+fetch('https://zapex-front.onrender.com/out_coins')
     .then((response) => response.json())
     .then((data) => {
         coins = data;
